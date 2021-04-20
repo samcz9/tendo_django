@@ -5,10 +5,10 @@ class HospitalAdmin(admin.ModelAdmin):
   list_display = ('name',)
 
 class PatientAdmin(admin.ModelAdmin):
-  list_display = ('first_name', 'last_name')
+  list_display = ('first_name', 'last_name', 'id')
 
 class PhysicianAdmin(admin.ModelAdmin):
-  list_display = ('first_name', 'last_name')
+  list_display = ('first_name', 'last_name', 'id')
 
 class AppointmentAdmin(admin.ModelAdmin):
   list_display = ('patient', 'physician', 'time_start')

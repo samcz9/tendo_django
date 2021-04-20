@@ -18,8 +18,9 @@ from django.conf.urls import include, url
 from django.urls import path
 from rest_framework.routers import DefaultRouter
 from rest_framework.authtoken import views as rest_framework_views
-
+from tendo_django.core.views import FeedbackSurveyViewSet
 api_v1_router = DefaultRouter(trailing_slash=False)
+api_v1_router.register(r'surveys', FeedbackSurveyViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

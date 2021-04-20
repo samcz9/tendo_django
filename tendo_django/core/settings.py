@@ -47,9 +47,12 @@ INSTALLED_APPS = [
     'tendo_django.core',
     'rest_framework',
     'rest_framework.authtoken',
+    'corsheaders',
+
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
