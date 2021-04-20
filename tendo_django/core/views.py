@@ -14,6 +14,8 @@ class FeedbackSurveyViewSet(viewsets.ModelViewSet):
     def save_survey(self, request, *args, **kwargs):
       data = request.data
       user = request.user
+      if not data["appointment_id"]:
+        return Reponse(400)
       appointment = Appointment.objects.get(id=data["appointment_id"])
       survey = FeedbackSurvey.objects.create(
         appointment=appointment,
