@@ -7,6 +7,7 @@ from django.db.models.signals import pre_save, post_save, pre_delete
 from django.dispatch import receiver
 from django.utils import timezone
 from tendo_django.core.managers import UserManager
+from datetime import datetime
 
 class TimestampModel(models.Model):
     created_at = models.DateTimeField(default=timezone.now, editable=False,
@@ -109,6 +110,10 @@ class FeedbackSurvey(TimestampModel):
   understanding = models.CharField(max_length=255)
   understanding_notes = models.TextField(null=True)
   patient_expression = models.TextField(null=True)
+
+  def __str__(self):
+        return self.appointment.patient.get_full_name() + ": " + self.appointment.time_start.strftime("%m/%d/%Y")
+
 
 @receiver(post_save, sender=Patient)
 def create_auth_token(sender, instance=None, created=False, **kwargs):

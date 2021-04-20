@@ -17,7 +17,7 @@ class DiagnosisAdmin(admin.ModelAdmin):
   list_display = ('name',)
 
 class FeedbackSurveyAdmin(admin.ModelAdmin):
-  list_display = ('appointment',)
+  list_display = ('__str__',)
 
 admin.site.register(Hospital, HospitalAdmin)
 admin.site.register(Patient, PatientAdmin)
