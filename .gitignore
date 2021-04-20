@@ -1,0 +1,103 @@
+### OSX ###
+.DS_Store
+.AppleDouble
+.LSOverride
+
+### SublimeText ###
+# cache files for sublime text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+
+# workspace files are user-specific
+*.sublime-project
+*.sublime-workspace
+.idea
+
+# project files should be checked into the repository, unless a significant
+# proportion of contributors will probably not be using SublimeText
+# *.sublime-project
+
+# sftp configuration file
+sftp-config.json
+
+# Basics
+*.py[cod]
+__pycache__
+
+client/
+
+# Logs
+*.log
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+htmlcov
+reports
+coverage
+webapp_results.xml
+api_results.xml
+e2etest.xml
+django.xml
+test-report.xml
+
+# Translations
+*.mo
+*.pot
+
+# Pycharm
+.idea
+
+# Vim
+*~
+*.swp
+*.swo
+.tern-port
+
+# npm
+node_modules/
+
+# bower
+bower_components/
+
+# Compass
+.sass-cache
+
+# virtual environments
+.env
+venv
+.python-version
+
+# User-uploaded media
+rxfit/media/
+
+# Built assets
+/static/*
+!rxfit/static/.gitkeep
+rxfit/assets/build
+.awspublish-*
+
+# Hitch directory
+tests/.hitch
+
+# MailHog binary
+mailhog
+
+.envrc
+.venv
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+.vagrant
+
+*.codekit3
+
+# VSCode
+*.code-workspace
+.vscode
